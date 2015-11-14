@@ -1,8 +1,6 @@
-import subprocess
-import os
-
-
 def shell(s, on=None, start_new_session=False, asynchronous=True):
+    import subprocess
+    import os
 
     if on is not None:
         on = os.path.expanduser(on)
