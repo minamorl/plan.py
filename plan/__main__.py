@@ -28,7 +28,6 @@ def detect_rules():
 
     except FileNotFoundError:
         raise DetectionError
- 
 
 
 def main():
