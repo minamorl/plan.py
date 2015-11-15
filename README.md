@@ -33,7 +33,7 @@ No rule was found. [FAIL]
 
 `shell` function is a wrapper, compatible with `submodule.Popen`.
 
-```
+```python
 from plan import shell
 
 def plan_A():
@@ -43,3 +43,5 @@ plans = {
     "A": plan_A
 }
 ```
+
+By default, `shell` function runs executable asynchronously. If a plan function yields shell objects, plan.py takes care those Popen object will be sucessfully terminated.
