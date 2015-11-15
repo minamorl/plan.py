@@ -42,7 +42,7 @@ def main():
         args = parser.parse_args()
 
     except DetectionError:
-        print(colored.red("No rule was found. [FAIL]"))
+        print(colored.red("No plan was found. [FAIL]"))
         return 1
 
     if not hasattr(args, "func"):
@@ -50,7 +50,7 @@ def main():
         return 1
 
     try:
-        process_list = list(args.func(args))
+        process_list = list(args.func(args) or [])
         for proc in process_list:
             proc.wait(TIME_LIMIT)
 
