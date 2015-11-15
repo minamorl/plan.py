@@ -4,6 +4,8 @@ app_name = "plan"
 
 setup(
     name="plan-py",
+    author="minamorl",
+    author_email="minamorl@minamorl.com",
     version="0.0.1",
     packages=find_packages(),
     entry_points={
