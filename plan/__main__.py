@@ -45,14 +45,14 @@ def main():
         print(colored.red("No rule was found. [FAIL]"))
         return 1
 
+    if not hasattr(args, "func"):
+        print(parser.format_help())
+        return 1
+
     try:
         process_list = list(args.func(args))
         for proc in process_list:
             proc.wait(TIME_LIMIT)
-
-    except AttributeError:
-        print(parser.format_help())
-        return
 
     except KeyboardInterrupt:
         print("")
