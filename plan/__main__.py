@@ -22,7 +22,7 @@ class DetectionError(Exception):
 def detect_rules():
     import importlib
     try:
-        return importlib.machinery.SourceFileLoader("rules", os.getcwd() + "/.plans.py").load_module()
+        return importlib.machinery.SourceFileLoader("rules", os.path.join(os.getcwd(), ".plans.py")).load_module()
 
     except ImportError:
         raise DetectionError
