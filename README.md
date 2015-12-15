@@ -19,7 +19,23 @@ No such file or directory
 No rule was found. [FAIL]
 ```
 
-## installation
+## How to use
+
+**plan.py** detects a `.plans.py` file inside your directory, and runs tasks which you defined in a `.plans.py` file.
+You must import plan.plan decorrator inside your .plans.py files:
+```python
+from plan import plan
+```
+And then, you can define your task by this way:
+
+```python
+@plan("YOUR_PLAN_NAME")
+def task_your_plan_name():
+    print("Hi!")
+```
+
+
+## Installation
 
 ```
 % pip install plan-py
