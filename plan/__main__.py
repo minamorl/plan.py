@@ -1,5 +1,6 @@
 import os
 import sys
+from . import plans
 TIME_LIMIT = 3600
 
 
@@ -8,7 +9,7 @@ def generate_argpase(mod):
     parser = argparse.ArgumentParser()
     subparsers = parser.add_subparsers()
 
-    for planname, func in mod.plans.items():
+    for planname, func in plans.items():
         subparser = subparsers.add_parser(planname)
         subparser.add_argument("args", nargs=argparse.REMAINDER)
         subparser.set_defaults(func=func)

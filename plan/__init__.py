@@ -1,3 +1,19 @@
+plans = {}
+
+def plan(plan_name):
+    def _plan(func):
+        import functools
+        def wrapper(*args, **kwargs):
+            return func(*args, **kwargs)
+            
+        global plans
+        plans.update({
+            plan_name: func
+        })
+        return wrapper
+    return _plan
+
+
 def shell(s, on=None, start_new_session=False, asynchronous=True):
     import subprocess
     import os
