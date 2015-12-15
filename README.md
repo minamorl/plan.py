@@ -2,7 +2,7 @@
 
 Task Runner for Python 3.
 
-```
+```python
 % cat .plans.py
 from plan import plan
 
