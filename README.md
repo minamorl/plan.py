@@ -2,13 +2,13 @@
 
 Task Runner for Python 3.
 
-```
+```python
 % cat .plans.py
+from plan import plan
+
+@plan("A")
 def plan_A(args):
     print("Hi!")
-plans = {
-  "A": plan_A
-}
 
 % plan A
 Hi!
@@ -34,14 +34,11 @@ No rule was found. [FAIL]
 `shell` function is a wrapper, compatible with `submodule.Popen`.
 
 ```python
-from plan import shell
+from plan import shell, plan
 
+@plan("A")
 def plan_A():
     yield shell(["gulp"], on=your_repository)
-
-plans = {
-    "A": plan_A
-}
 ```
 
 By default, `shell` function runs executable asynchronously. If a plan function yields shell objects, plan.py takes care those Popen object will be sucessfully terminated.
