@@ -21,7 +21,7 @@ No rule was found. [FAIL]
 
 ## How to use
 
-**plan.py** detects a `.plans.py` file inside your directory, and runs tasks which you defined in a `.plans.py` file.
+**plan.py** provides `plan` command that detects a `.plans.py` file inside your directory, and runs tasks which you defined in a `.plans.py` file.
 You must import plan.plan decorrator inside your .plans.py files:
 ```python
 from plan import plan
