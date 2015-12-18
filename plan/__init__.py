@@ -1,4 +1,6 @@
-plans = {}
+import collections
+
+plans = collections.OrderedDict()
 
 def plan(plan_name):
     def _plan(func):
