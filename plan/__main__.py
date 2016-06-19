@@ -1,6 +1,6 @@
 import os
 import sys
-from . import plans
+from plan import plans
 TIME_LIMIT = 3600
 
 
