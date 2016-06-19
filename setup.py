@@ -11,4 +11,7 @@ setup(
     entry_points={
         'console_scripts': ['{app_name} = {app_name}.__main__:main'.format(app_name=app_name)]
     },
+    install_requires=[
+        "clint"
+    ]
 )
